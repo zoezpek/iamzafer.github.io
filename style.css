@@ -395,8 +395,49 @@ strong {
 
 /* Media Query für Bildschirmgrößen bis 600px Breite */
 @media only screen and (max-width: 600px) {
-    .content h1{
-        width: 30%;
+    .switch {
+        display: none;
+    }
+    
+    .logo-container img {
+        width: 50%; /* Breite auf 20% der Elternbreite festlegen */
+        height: auto; /* Die Höhe automatisch anpassen, um das Seitenverhältnis beizubehalten */
+    }
+
+    .content h1 {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 100%;
+    }
+
+    h3 {
+        font-size: 90%;
+    }
+
+    p {
+        font-size: 70%;
+    }
+
+    button {
+        font-size: 70%;
+    }
+
+    .scroll-to-top-button {
+        font-size: 18px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #contactButton {
+        padding: 3px 6px; 
+        font-size: 12px;
+    }
+
+    .project-navigation button {
+        padding: 3px 6px; 
+        font-size: 12px; 
     }
     
     .about_me {
@@ -407,7 +448,15 @@ strong {
         width: 100%;
     }
 
+    .skill-name {
+        font-size: 90%;
+    }
+
     .project {
         width: 70%;
+    }
+
+    .project p {
+        font-size: 70%;
     }
 }
