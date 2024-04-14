@@ -82,6 +82,10 @@ input:checked + .slider:before {
     background-color: black;
 }
 
+.dark-mode .skill-name {
+    color: white;
+}
+
 .dark-mode #video-bg-skills {
     filter: invert(100%);
 }
