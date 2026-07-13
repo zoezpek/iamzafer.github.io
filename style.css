@@ -1,472 +1,478 @@
-body, html {
+/* Grundlayout */
+
+html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
-/* Schiebeschalter-Stil */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-}
-  
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-}
-  
-input:checked + .slider {
-    background-color: #4F1BDC;
-}
-  
-input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.dark-mode {
-    background-color: black;
-}
 
-.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode p, .dark-mode .navbar a{
-    color: white;
-}
 
-.dark-mode .quote {
-    background-color: #221F1F;
-}
+/* Header */
 
-.dark-mode .quote p{
-    color: white;
-}
-
-.dark-mode .quote_color_alt p{
-    color: #CBCBCB
-}
-
-.dark-mode #video-bg {
-    filter: invert(100%);
-}
-
-.dark-mode .about_me {
-    background-color: black;
-}
-
-.dark-mode .skill-name {
-    color: white;
-}
-
-.dark-mode #video-bg-skills {
-    filter: invert(100%);
-}
-
-.dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-/*Scroll-To-Top-Button*/
-
-.scroll-to-top-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4F1BDC;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-}
-
-.scroll-to-top-button:hover {
-    background-color: #3D1471;
-}
-
-.banner_white {
+.banner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
+
 #video-bg {
+
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 }
 
-h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #221F1F;
-    font-size: 520%;
-}
 
-h2 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #221F1F;
-    font-size: 220%;
-}
-
-h3 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #221F1F;
-    font-size: 180%;
-}
-
-p {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #221F1F;
-    font-size: 100%;
-    font-weight: bold;
-}
-
-.button-container {
-    text-align: center;
-}
-
-.button {
-    background-color: #4F1BDC;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.button:hover {
-    background-color: #3D1471;
-}
-
-.button:active {
-    transform: translateY(2px);
-}
-
-strong {
-    color:#4F1BDC;
-}
-
-.logo {
-    width: 15%;
-    height: auto;
-}
-
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-}
-
-.content h1 {
-    margin-top: 10%;
-}
 
 .navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1;
-        text-align: center;
-}
 
-.navbar .icon {
-    width: 2%;
-    height: auto;
-}
-
-.navbar a {
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 0 2%;
-}
-
-/*Über mich*/
-
-.about_me h2 {
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.about_me h3 {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.about_me {
-    width: 50%;
-    background-color: white;
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about_me img {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.quote {
-    background-color: #D7D7D7;
-    color: #221F1F;
-    width: 100%;
-    padding: 2%;
-}
-
-.quote_color_alt p{
-    color: #6B6161
-}
-
-/*Skills*/
-
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-.skills h2 {
-    text-transform: uppercase;
-}
-
-#video-bg-skills {
     position: absolute;
+
     top: 0;
-    left: 0;
+
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
 
-.skill {
-    width: 80%;
-    margin-bottom: 20px;
-}
-
-.skill-name {
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    color: #221F1F;
-}
-
-.skill-bar {
-    height: 20px;
-    border-radius: 10px;
-}
-
-/*Einzelne Skillbars*/
-
-.java { background-color: #4F1BDC; }
-.c { background-color: #4F1BDC; }
-.html5 { background-color: #4F1BDC; }
-.css3 { background-color: #4F1BDC; }
-.photoshop { background-color: #4F1BDC; }
-.blender { background-color: #4F1BDC; }
-
-/*Projects*/
-
-.projects {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+
+    z-index: 2;
+
 }
 
-.projects h2 {
-    text-transform: uppercase;
-}
 
-.project {
-    display: none;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
-.project h3 {
-    color: #4F1BDC;
-    text-transform: uppercase;
-}
+.logo {
 
-.project p {
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 1.5;
-}
+    width: 25%;
 
-.project-navigation {
-    margin-top: 20px;
-}
-
-.project-navigation button {
-    background-color: #4F1BDC;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-navigation button:hover {
-    background-color: #3D1471;
-}
-
-.project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 4px solid #D7D7D7;
-    border-radius: 10px;
-}
-
-.project video {
-    border: 4px solid #D7D7D7;
-    border-radius: 10px;
-}
-
-#animationsfilm video {
-    max-width: 100%;
     height: auto;
+
 }
 
-/*Footer*/
+
+
+
+.content {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+
+    z-index: 1;
+
+}
+
+
+
+
+h1 {
+
+    text-align: center;
+
+    color: #221F1F;
+
+    font-size: clamp(3rem, 5vw, 5.2rem);
+
+}
+
+
+
+h2 {
+
+    text-align: center;
+
+    color: #221F1F;
+
+    font-size: 220%;
+
+}
+
+
+
+strong {
+
+    color: #4F1BDC;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+/* Scroll Button */
+
+.scroll-to-top-button {
+
+    display: none;
+
+    position: fixed;
+
+    bottom: 20px;
+
+    right: 20px;
+
+
+    background-color: #4F1BDC;
+
+    color: white;
+
+
+    border: none;
+
+    border-radius: 50%;
+
+
+    width: 50px;
+
+    height: 50px;
+
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+
+    z-index: 1000;
+
+}
+
+
+
+.scroll-to-top-button:hover {
+
+    background-color: #3D1471;
+
+}
+
+
+
+
+
+
+/* Projekte */
+
+.project-section {
+
+    width: 100%;
+
+    padding: 100px 0;
+
+    background-color: white;
+
+}
+
+
+
+.project-section.grey {
+
+    background-color: rgb(224,224,224);
+
+}
+
+
+
+
+.container {
+
+    width: 70%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+
+
+
+.project-section h2 {
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-size: 300%;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+
+.title-line {
+
+    width: 15%;
+
+    height: 8px;
+
+
+    background-color: #4F1BDC;
+
+
+    margin: -20px auto 40px auto;
+
+}
+
+
+
+
+
+
+/* Projekt Logos */
+
+.project-logo {
+
+    display: block;
+
+    height: auto;
+
+    margin: 0 auto 40px auto;
+
+}
+
+
+
+.zafer-media-logo {
+
+    width: 35%;
+
+}
+
+
+
+.mother-natvre-logo {
+
+    width: 35%;
+
+}
+
+
+
+.dutytale-logo {
+
+    width: 45%;
+
+}
+
+
+
+
+
+
+
+/* Texte */
+
+.project-section p {
+
+    max-width: 850px;
+
+    margin: 0 auto 40px auto;
+
+
+    text-align: center;
+
+
+    font-size: 18px;
+
+
+    line-height: 1.8;
+
+
+    font-weight: normal;
+
+
+    color: #221F1F;
+
+}
+
+
+
+
+
+
+
+/* Buttons */
+
+.project-btn {
+
+
+    display: block;
+
+
+    width: fit-content;
+
+
+    margin: 0 auto;
+
+
+
+    background-color: #4F1BDC;
+
+
+
+    color: white;
+
+
+    text-decoration: none;
+
+
+    font-weight: bold;
+
+
+
+    padding: 14px 30px;
+
+
+
+    border-radius: 6px;
+
+
+
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+
+.project-btn:hover {
+
+    background-color: #3D1471;
+
+}
+
+
+
+
+
+
+
+/* Footer */
 
 .footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
+
     width: 100%;
+
     background-color: #221F1F;
-    padding: 1%;
+
+    padding: 20px 0;
+
+    text-align: center;
+
 }
 
-.footer p{
+
+
+.footer p {
+
     color: white;
-    font-size: 50%;
+
+    font-size: 14px;
+
+    margin: 0;
+
 }
 
-/*Responsive Design*/
 
-/* Media Query für Bildschirmgrößen bis 600px Breite */
+
+
+
+
+
+
+/* Responsive */
+
 @media only screen and (max-width: 600px) {
-    .switch {
-        display: none;
-    }
-    
-    .logo-container img {
-        width: 50%; /* Breite auf 20% der Elternbreite festlegen */
-        height: auto; /* Die Höhe automatisch anpassen, um das Seitenverhältnis beizubehalten */
+
+
+    .logo {
+
+        width: 50%;
+
     }
 
-    .content h1 {
-        font-size: 300%;
+
+
+    .content {
+
+        width: 90%;
+
     }
+
+
+
+    h1 {
+
+        font-size: 300%;
+
+    }
+
+
 
     h2 {
-        font-size: 100%;
+
+        font-size: 150%;
+
     }
 
-    h3 {
-        font-size: 90%;
+
+
+    .container {
+
+        width: 85%;
+
     }
 
-    p {
-        font-size: 70%;
+
+
+    .project-section p {
+
+        font-size: 16px;
+
     }
 
-    button {
-        font-size: 70%;
+
+
+    .zafer-media-logo,
+    .mother-natvre-logo,
+    .dutytale-logo {
+
+        width: 50%;
+
     }
+
+
 
     .scroll-to-top-button {
-        font-size: 18px;
+
         width: 40px;
+
         height: 40px;
+
+        font-size: 18px;
+
     }
 
-    #contactButton {
-        padding: 3px 6px; 
-        font-size: 12px;
-    }
-
-    .project-navigation button {
-        padding: 3px 6px; 
-        font-size: 12px; 
-    }
-    
-    .about_me {
-        width: 70%;
-    }
-
-    .skills {
-        width: 100%;
-    }
-
-    .skill-name {
-        font-size: 90%;
-    }
-
-    .project {
-        width: 70%;
-    }
-
-    .project p {
-        font-size: 70%;
-    }
 }
